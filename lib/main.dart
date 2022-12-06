@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'budget_screen.dart';
+
 
 void main(List<String> args) async {
   await dotenv.load(fileName: '.env');
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,22 +19,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
-      home: BudgetScreen(),
+      home: const BudgetScreen(),
     );
   }
 }
 
-
-class BudgetScreen extends StatefulWidget {
-  const BudgetScreen({super.key});
-
-  @override
-  State<BudgetScreen> createState() => _BudgetScreenState();
-}
-
-class _BudgetScreenState extends State<BudgetScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
